@@ -1,7 +1,7 @@
 import './App.css';
+import Footer from './componentes/footer/Footer';
 import ItemList from './componentes/ItemList/ItemList';
-import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import CollapsibleExample from './componentes/NavBar/CollapsibleExample';
+import CollapsibleExample from './componentes/NavBar/Header/Header';
 
 function App() {
   let estiloFondo = { backgroundColor: "#b398ff"} ;
@@ -9,8 +9,8 @@ function App() {
   return (
     <div style={estiloFondo} className="App">
       <CollapsibleExample />
-      <ItemListContainer greeting="Bienvenidos!"/>
       <ItemList />
+      <Footer />
     </div>
   );
 }
