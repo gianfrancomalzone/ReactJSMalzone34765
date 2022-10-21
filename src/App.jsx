@@ -1,6 +1,7 @@
+import React from 'react'
 import './App.css';
 import Footer from './componentes/footer/Footer';
-import ItemList from './componentes/ItemList/ItemList';
+import ItemList from './componentes/ItemList/ItemListContainer';
 import CollapsibleExample from './componentes/NavBar/Header/Header';
 
 function App() {

@@ -8,3 +8,7 @@
     max-height: 18rem ;
     margin: 3% ;
 }
+
+.marginCard {
+    margin: 2% !important;
+}
