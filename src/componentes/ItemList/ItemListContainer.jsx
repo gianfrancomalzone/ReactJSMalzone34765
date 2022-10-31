@@ -2,7 +2,7 @@ import React, {useState, useEffect } from "react";
 import { getAutos } from "../mockAPI/mockAPI";
 
 function ItemListContainer(props) {
-  // eslint-disable-next-line
+
   const [autoList, setAutosList] = useState([]);
 
   useEffect(() => {
