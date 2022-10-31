@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from "./Card/Card"
 
+<<<<<<< Updated upstream
 function ItemList() {
     // props = titulo / imgSrc / imgAlt / descripcion / precio
     return (
@@ -29,6 +30,22 @@ function ItemList() {
             />
         </div>
     )
+=======
+function ItemList(props) {
+  return (
+    <div> 
+        { autoList.map((listaAutos) => {
+        return <Card 
+        key={listaAutos.id}
+        titulo={listaAutos.titulo} 
+        imagen={listaAutos.imagen} 
+        marca={listaAutos.marca} 
+        precio={listaAutos.precio} 
+        stock={listaAutos.stock}/>;
+      })} 
+    </div>
+  )
+>>>>>>> Stashed changes
 }
 
 export default ItemList

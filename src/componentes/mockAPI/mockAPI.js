@@ -1,0 +1,148 @@
+const data = [
+{
+    "id": 1,
+    "titulo": "Cronos",
+    "precio": 20170,
+    "stock": 1,
+    "marca": "Fiat",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.plPZy5CntrvUqnlgZJCxVwHaEK%26pid%3DApi&f=1&ipt=0e917ce113c568d6d54771f1e75eff6316be682a4577d2695e69552fd7b29293&ipo=images",
+}, {
+    "id": 2,
+    "titulo": "Hilux",
+    "precio": 18610,
+    "stock": 7,
+    "marca": "Toyota",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.UKSgwdSg4D2bEvzfhKsRGgHaE7%26pid%3DApi&f=1&ipt=51e8eda1201a65ce67e29bd566b4c210792730b3d53c8dcb46e0de6ac2d13403&ipo=images",
+}, {
+    "id": 3,
+    "titulo": "Amarok",
+    "precio": 10700,
+    "stock": 9,
+    "marca": "Volkswagen",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.X_aUt3Ip0T_ubhlcYLdyEAHaE8%26pid%3DApi&f=1&ipt=eb342f7d622955d7c9b1fe17daeeabf8285323c5a488d31eeda84119cc6985bc&ipo=images",
+}, {
+    "id": 4,
+    "titulo": "208",
+    "precio": 33920,
+    "stock": 7,
+    "marca": "Peugeot",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.IHNTiVPIXdbsYmOlLJ9lqQHaEK%26pid%3DApi&f=1&ipt=50909489b87f3cff0127b925cb2cb2a13c469627b342931171b2889aba2e0766&ipo=images",
+}, {
+    "id": 5,
+    "titulo": "Gol Trend",
+    "precio": 21150,
+    "stock": 9,
+    "marca": "Volkswagen",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3U49MszWiCnn3Qwv6Nt1dQHaFj%26pid%3DApi&f=1&ipt=2cb6b6eb85ec5916ed7bd68cf992f842503e76744827a9d75b43b51f5b842d6e&ipo=images",
+}, {
+    "id": 6,
+    "titulo": "Ranger",
+    "precio": 10240,
+    "stock": 3,
+    "marca": "Ford",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3_jbZiwSUyvXRG9WYC8uygHaEK%26pid%3DApi&f=1&ipt=5aea1d3cac3a70acfd63a07d6ac922d35f5179db33aa3f55466b5dff7e869bbf&ipo=images",
+}, {
+    "id": 7,
+    "titulo": "Etios",
+    "precio": 14840,
+    "stock": 10,
+    "marca": "Toyota",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.6R6UsD4Q64dRjN3f-2bmCAHaEZ%26pid%3DApi&f=1&ipt=7ae651b1c725f5470543e38c76f5b5d0615d9e9702c6de823c15db19fb5f1345&ipo=images",
+}, {
+    "id": 8,
+    "titulo": "Yaris RS",
+    "precio": 56900,
+    "stock": 7,
+    "marca": "Toyota",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.PRE7-wElDjpFdQ_sXaSoJQHaEA%26pid%3DApi&f=1&ipt=5eb02b808128e0bbb38cf09a939f28116ef0d393a7e24476e4b1a4124f4b8dee&ipo=images",
+}, {
+    "id": 9,
+    "titulo": "Supra",
+    "precio": 29360,
+    "stock": 7,
+    "marca": "Toyota",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YYTfwASjxf_dhR2m2f1tQgHaE8%26pid%3DApi&f=1&ipt=7872d5c84f9a2da70263668fb74fddf85b33a65f15bf0a5ba74dd04744ee7347&ipo=images",
+}, {
+    "id": 10,
+    "titulo": "Focus ST",
+    "precio": 9950,
+    "stock": 2,
+    "marca": "Ford",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP._1AXNCgZjI7dR2yaoeX3xwHaEA%26pid%3DApi&f=1&ipt=c2ad16b8a1782a14a30d5970fa379203c85fa991bbcd04e4b028f9368582fe90&ipo=images",
+}, {
+    "id": 11,
+    "titulo": "Prelude",
+    "precio": 11730,
+    "stock": 2,
+    "marca": "Toyota",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.u107nC2atMzHhPFj1qza5AHaEO%26pid%3DApi&f=1&ipt=4dd4e5356ba828a390e12a40e45df4e1dd37857406f00d970885b47e7526babc&ipo=images",
+}, {
+    "id": 12,
+    "titulo": "959",
+    "precio": 45590,
+    "stock": 7,
+    "marca": "Porshe",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.zb8BRG_LwjhT1p4OpaHAlQHaE8%26pid%3DApi&f=1&ipt=f58024f7ad1e28f11ba081cd8e7099845ffa2bfd2d3b089d39e3a2df521e40a5&ipo=images",
+}, {
+    "id": 13,
+    "titulo": "Impreza WRX STI ",
+    "precio": 49970,
+    "stock": 6,
+    "marca": "Subaru",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.CveDwleok8qP2jRHN0RfsQHaE8%26pid%3DApi&f=1&ipt=9c91e240725428d5fec7e0afc51c108f83984cbd59df9c57c912961732aecfc5&ipo=images",
+}, {
+    "id": 14,
+    "titulo": "Escort RS1800",
+    "precio": 30630,
+    "stock": 3,
+    "marca": "Ford",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.j4yOzy5gi8chaR0d4QWouQHaFE%26pid%3DApi&f=1&ipt=04615f85953d4478d484ecfc0ce9daeb5151ae37163b0b6686a824329ecb6983&ipo=images",
+}, {
+    "id": 15,
+    "titulo": "Lancer",
+    "precio": 40960,
+    "stock": 1,
+    "marca": "Mitsubishi",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.xedizP9_kPvVvc7LmItdagHaEK%26pid%3DApi&f=1&ipt=f5ea386ab7b9df7f938e935385d7579a92a81ab0b65ff9a4584c787f27aae7d1&ipo=images",
+}, {
+    "id": 16,
+    "titulo": "RS Turbo",
+    "precio": 12400,
+    "stock": 9,
+    "marca": "Renault",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Zp4luPt2PKPZZHBZFEoqUAHaE7%26pid%3DApi&f=1&ipt=c9e53b79d9e5641ed27411a74fd340aec75c5fb8e4c48497f2255efa75ebfc1b&ipo=images",
+}, {
+    "id": 17,
+    "titulo": "Stratos",
+    "precio": 13600,
+    "stock": 0,
+    "marca": "Lancia",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.qtp3i9aeKQnXi4vDNbDbygHaE6%26pid%3DApi&f=1&ipt=ec82447cbb1bedb41753584c6a5aa42ad07a3b02e8bb9a1dd9b23aae3c16da41&ipo=images",
+}, {
+    "id": 18,
+    "titulo": "Polo R WRC",
+    "precio": 20140,
+    "stock": 9,
+    "marca": "Volkswagen",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.qKsz3fWf8BSd6Rr27cHd1AHaEK%26pid%3DApi&f=1&ipt=67a029c63be82a6e8d9c7ef56b17ec4a78dd8cc9e83377e04422d91f52f9544a&ipo=images",
+}, {
+    "id": 19 ,
+    "titulo": "Quattro S1",
+    "precio": 28800,
+    "stock": 10,
+    "marca": "Audi",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.SxWWzdZfEo2_o-CfC7XcPQHaEo%26pid%3DApi&f=1&ipt=dfc9afde46b594d86f96bb507fb934420240877f88a55e555b7014ac20a3b33c&ipo=images",
+}, {
+    "id": 20,
+    "titulo": "Clio V6",
+    "precio": 12410,
+    "stock": 5,
+    "marca": "Renault",
+    "imagen": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.n6zJbiAr-HrGMVBrdHUOtgHaE2%26pid%3DApi&f=1&ipt=4017b67004aa9da72f8c0f8ec27122f487f527126750b178ae52b061d5031555&ipo=images",
+} ]
+
+export function getAutos(){
+    return new Promise((resolve) => {
+        setTimeout(() =>  resolve(data), 300);
+    });
+}
