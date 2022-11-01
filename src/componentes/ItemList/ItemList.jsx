@@ -8,7 +8,7 @@ function ItemList(props) {
         return <Card 
         key={listaAutos.id}
         titulo={listaAutos.titulo} 
-        imagen={listaAutos.imagen} 
+        imgSrc={listaAutos.imgSrc} 
         marca={listaAutos.marca} 
         precio={listaAutos.precio} 
         stock={listaAutos.stock}/>;
