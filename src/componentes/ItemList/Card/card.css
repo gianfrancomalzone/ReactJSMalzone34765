@@ -1,10 +1,29 @@
 .card {
-    background-color: beige ;
-    width: 20rem; 
+    background-color: beige;
+    width: 20rem;
 }
 
-.imgTamaño{
-    max-width: 18rem;
-    max-height: 18rem ;
-    margin: 3% ;
+.btn-card {
+    font-weight: 650;
+    color: #131313;
+    padding: 0.7en 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #E94545;
+    border: 3px solid #D2D2D2;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #fff;
+}
+
+button:hover {
+    box-shadow: -6px -6px 12px #c5c5c5,
+        6px 6px 12px #fff;
+}
+
+.imgTamaño {
+    object-fit: cover ;
+    max-width: 290px;
+    margin: 3%;
+    align-items: center;
 }

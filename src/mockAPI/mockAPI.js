@@ -143,6 +143,15 @@ const data = [
 
 export function getAutos(){
     return new Promise((resolve) => {
-        setTimeout(() =>  resolve(data), 300);
+        setTimeout(() =>  resolve(data), 500);
+    });
+}
+
+export function getAutosDetail(idParams){
+    return new Promise((resolve) => {
+        let autoReq = data.find( (item) => {
+            return item.id === Number(idParams) ;
+        })
+        setTimeout(() =>  resolve(autoReq) , 500);
     });
 }
