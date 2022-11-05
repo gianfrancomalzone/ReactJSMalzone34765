@@ -17,6 +17,7 @@ function App() {
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/autos/:id" element={<ItemDetailContainer />} />
             <Route path="*" element={<h1 style={estiloFondo}>Fuera del Route</h1>} />
+            <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
           </Routes>
         <Footer />
       </BrowserRouter>

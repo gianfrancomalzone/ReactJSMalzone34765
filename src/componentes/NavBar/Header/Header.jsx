@@ -8,9 +8,11 @@ function Header() {
     <div className="nav-bar">
       <ul className="nav-menu">
         <Link className="link" to="/">Inicio </Link>
-        <Link className="link" to="/autos">Autos</Link>
-        <Link className="link" to="/category/deportivos">Deportivos</Link>
-        <Link className="link" to="/category/rally">Rally</Link>
+        <Link className="link" to="/category/sedan">Sedan</Link>
+        <Link className="link" to="/category/camioneta">Camionetas</Link>
+        <Link className="link" to="/category/rally">Autos de Rally</Link>
+        <Link className="link" to="/category/deportivo">Deportivos</Link>
+        <Link className="link" to="/category/coupe">Copues</Link>
         <CartWidget />
       </ul>
     </div>
