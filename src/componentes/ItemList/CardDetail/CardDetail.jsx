@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default function CardDetail(props) {
-    return (    
+  console.log(props.description)
+    return (
         <div className="col d-flex justify-content-center mb-4"> 
         <div className="col d-flex justify-content-center mb-4">
           <div className="card shadow mb-1  rounded">
@@ -9,7 +10,7 @@ export default function CardDetail(props) {
             <h5 className="card-title pt-2 text-center text">{props.titulo}</h5>
             <img src={props.imgSrc} className="card-img-top imgTamaño" alt={props.imgAlt} />
             <div className="card-body">
-              <p className="card-text text-white-50 description">{props.descripcion}</p>
+              <p className="card-text text-black-50 description">{props.description}</p>
               <h5 className="text">
                 Precio: <span className="precio">${props.precio}</span>
               </h5>

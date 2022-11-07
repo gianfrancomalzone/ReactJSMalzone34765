@@ -18,14 +18,15 @@ function ItemDetailContainer(props) {
 
   return (
     <div>
-      <CardDetail 
+      <CardDetail
         id={autosDetail.id}
         key={autosDetail.id}
-        titulo={autosDetail.titulo} 
-        imgSrc={autosDetail.imgSrc} 
-        marca={autosDetail.marca} 
-        precio={autosDetail.precio} 
+        titulo={autosDetail.titulo}
+        imgSrc={autosDetail.imgSrc}
+        marca={autosDetail.marca}
+        precio={autosDetail.precio}
         stock={autosDetail.stock}
+        description={autosDetail.description}
         />
     </div>
   );
