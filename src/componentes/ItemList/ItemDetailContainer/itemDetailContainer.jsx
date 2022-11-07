@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect } from "react";
 import { getAutosDetail } from "../../../mockAPI/mockAPI";
-import Card from "../Card/Card";
 import { useParams } from "react-router-dom";
+import CardDetail from "../CardDetail/CardDetail";
 
 function ItemDetailContainer(props) {
   const [autosDetail, setAutosDetail] = React.useState([])
@@ -18,7 +18,8 @@ function ItemDetailContainer(props) {
 
   return (
     <div>
-      <Card 
+      <CardDetail 
+        id={autosDetail.id}
         key={autosDetail.id}
         titulo={autosDetail.titulo} 
         imgSrc={autosDetail.imgSrc} 
