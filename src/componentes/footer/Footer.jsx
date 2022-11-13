@@ -13,7 +13,7 @@ export default function Footer() {
             >
             </a>
             <span className="mb-3 mb-md-0 text-muted">
-              &copy; 2022 Company, Inc
+            <ContadorClicks className="text-center align-items-center"   />
             </span>
           </div>
 
@@ -33,7 +33,7 @@ export default function Footer() {
           </ul>
         </footer>
       </div>
-      <ContadorClicks> Clikeame </ContadorClicks>
+      
     </>
   );
 }

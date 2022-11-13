@@ -1,33 +1,22 @@
-import React, {useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import { getAutosDetail } from "../../../mockAPI/mockAPI";
 import { useParams } from "react-router-dom";
 import CardDetail from "../CardDetail/CardDetail";
 
 function ItemDetailContainer(props) {
-  const [autosDetail, setAutosDetail] = React.useState([])
+  const [autosDetail, setAutosDetail] = useState([])
   const { id } = useParams();
 
   useEffect(() => {
     getAutosDetail(id).then(data => {
       setAutosDetail(data)
-    }).catch(error => {
-      setAutosDetail([])
-    }).catch(error => {
     })
-  }, [autosDetail]) ;
+  }, [id]) ;
 
   return (
     <div>
       <CardDetail
-        id={autosDetail.id}
-        key={autosDetail.id}
-        titulo={autosDetail.titulo}
-        imgSrc={autosDetail.imgSrc}
-        marca={autosDetail.marca}
-        precio={autosDetail.precio}
-        stock={autosDetail.stock}
-        description={autosDetail.description}
-        />
+        autos={autosDetail} />
     </div>
   );
 }

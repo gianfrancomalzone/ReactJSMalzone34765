@@ -1,5 +1,5 @@
 .card {
-    background-color: beige;
+    background-color: rgb(179, 179, 153);
     width: 20rem;
 }
 
@@ -11,6 +11,7 @@
     border-radius: 0.5em;
     background: #E94545;
     border: 3px solid #D2D2D2;
+    text-decoration: none !important;
     transition: all .3s;
     box-shadow: 6px 6px 12px #c5c5c5,
                 -6px -6px 12px #fff;

@@ -1,23 +1,21 @@
 import React, {useState} from 'react'
+import "./contadorClicks.css"
 
 export default function ClickCount() {
-    
     const [clicks,setClicks] = useState(0);
     const [UltimoClick, setUltimoClick] = useState();
 
     function handleClick(){
-        console.log("Se hizo el click");
         setClicks(clicks + 1) ;
         let horaClick = new Date().toLocaleTimeString();
         setUltimoClick(horaClick)
     }
 
 return (
-    <div onClick={handleClick}>
+    <div onClick={handleClick} >
         <span>
             Hora: {UltimoClick}
         </span>
     </div>
 )
 }
-//3.03

@@ -1,11 +1,15 @@
 import React from 'react'
-import cart from "../../img/cart.svg"
+import { useContext} from 'react'
+import { cartContext } from '../../../context/cartContext'
+import cartSvg from "../../img/cart.svg"
+import { Link } from "react-router-dom";
 
 export default function CartWidget() {
+    const {getTotalItemCount} = useContext(cartContext);
     return (
-    <span>
-        <img src={cart} alt="cart" />
-        5
-    </span>
+    <Link to={`/cart`}>
+        <img src={cartSvg} alt="cart" />
+        <span>{getTotalItemCount()}</span>
+    </Link>
     )
 }

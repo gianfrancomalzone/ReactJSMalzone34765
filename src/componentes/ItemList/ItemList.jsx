@@ -5,7 +5,6 @@ import "./itemList.css";
 function ItemList(props) {
   return (
     <>
-      <div className="b-example-divider barra-divisora"> 1 </div>
       <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
         
         {props.autosList.map((listaAutos) => {

@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./card.css"
+import Button from "../../button/Button"
+
 export default function Card(props) {
 
   return (    
-    <div className="col d-flex justify-content-center mb-4"> 
+
     <div className="col d-flex justify-content-center mb-4">
-      <div className="card shadow mb-1  rounded">
-        <h3 className="text">{props.marca}</h3>
+      <div className="card shadow mb-1 rounded">
+        <h3 className="text-center">{props.marca}</h3>
         <h5 className="card-title pt-2 text-center text">{props.titulo}</h5>
         <img src={props.imgSrc} className="card-img-top imgTamaño" alt={props.imgAlt} />
         <div className="card-body">
@@ -16,11 +18,10 @@ export default function Card(props) {
             Precio: <span className="precio">${props.precio}</span>
           </h5>
           <Link className="d-grid gap-2" to={`/autos/${props.id}`}>
-            <button className="btn-card">Más Información</button>
+            <Button className="btn-card">Más Información</Button>
           </Link>
         </div>
       </div>
-    </div>
     </div>
   )
 }

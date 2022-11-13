@@ -5,23 +5,23 @@ import ItemListContainer from "./componentes/ItemList/itemListContainer/ItemList
 import ItemDetailContainer from "./componentes/ItemList/ItemDetailContainer/itemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./componentes/NavBar/Header/Header";
+import {CartContextProvider} from "./context/cartContext"
 
 function App() {
-  let estiloFondo = { backgroundColor: "#D2D2D2" };
-
   return (
-    <div style={estiloFondo} className="App">
+    <CartContextProvider className="App">
       <BrowserRouter>
         <Header />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/autos/:id" element={<ItemDetailContainer />} />
-            <Route path="*" element={<h1 style={estiloFondo}>Fuera del Route</h1>} />
+            <Route path="*" element={<h1>Fuera del Route</h1>} />
             <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+            <Route path="/cart" element={<h1>Cart</h1>}/>
           </Routes>
         <Footer />
       </BrowserRouter>
-    </div>
+    </CartContextProvider>
   )
 }
 
