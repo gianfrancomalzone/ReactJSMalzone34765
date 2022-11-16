@@ -1,5 +1,6 @@
 import React from "react";
-import ContadorClicks from "./ContadorClicks.jsx/ContadorClicks";
+import ContadorClicks from "./contadorClicks/ContadorClicks";
+import "../../styles.scss"
 
 export default function Footer() {
   return (

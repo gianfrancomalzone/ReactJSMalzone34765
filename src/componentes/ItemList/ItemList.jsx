@@ -1,27 +1,24 @@
 import React from "react";
 import Card from "./Card/Card";
-import "./itemList.css";
+import "../../styles.scss";
 
 function ItemList(props) {
   return (
-    <>
       <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
-        
-        {props.autosList.map((listaAutos) => {
+        {props.productosList.map((listaproductos) => {
           return (
             <Card
-              key={listaAutos.id}
-              id={listaAutos.id}
-              titulo={listaAutos.titulo}
-              imgSrc={listaAutos.imgSrc}
-              marca={listaAutos.marca}
-              precio={listaAutos.precio}
-              stock={listaAutos.stock}
+              key={listaproductos.id}
+              id={listaproductos.id}
+              titulo={listaproductos.titulo}
+              img={listaproductos.img}
+              marca={listaproductos.marca}
+              precio={listaproductos.precio}
+              stock={listaproductos.stock}
             />
           );
         })}
       </div>
-    </>
   );
 }
 

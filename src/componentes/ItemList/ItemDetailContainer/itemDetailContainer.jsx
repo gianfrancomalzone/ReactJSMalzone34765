@@ -1,22 +1,23 @@
 import React, {useState, useEffect } from "react";
-import { getAutosDetail } from "../../../mockAPI/mockAPI";
+import { getProductosDetail } from "../../../services/firebase";
 import { useParams } from "react-router-dom";
 import CardDetail from "../CardDetail/CardDetail";
 
 function ItemDetailContainer(props) {
-  const [autosDetail, setAutosDetail] = useState([])
+  const [productosDetail, setproductosDetail] = useState({})
+  const [feedbackMsg, setFeedbackMsg] = useState(null)
   const { id } = useParams();
 
   useEffect(() => {
-    getAutosDetail(id).then(data => {
-      setAutosDetail(data)
-    })
+    getProductosDetail(id).then(data => {
+      setproductosDetail(data)
+    }).catch(error => {setFeedbackMsg(error.message)})
   }, [id]) ;
 
   return (
     <div>
-      <CardDetail
-        autos={autosDetail} />
+      { feedbackMsg !== null ?
+      <h1 className="text-center"> Error {feedbackMsg}</h1> : <CardDetail productos={productosDetail} /> }
     </div>
   );
 }

@@ -1,34 +1,32 @@
-import React, { useEffect } from "react";
-import { getAutos, getAutosCategoryId } from "../../../mockAPI/mockAPI";
+import { useEffect, useState } from "react";
+import { getProductos, getProductosCategoriaId } from "../../../services/firebase";
 import ItemList from "../ItemList";
 import {useParams} from "react-router-dom"
+import Loader from "../../loader/Loader";
 
-function ItemListContainer() {
-  const [autosList, setAutosList] = React.useState([])
-  const params = useParams();
-  const categoryId = params.categoryId;
-
-  useEffect(() => {
-    if (categoryId === undefined){
-    getAutos().then(data => {
-      setAutosList(data)
-    }).catch(error => {
-      setAutosList([])
-    }).catch(error => {
-    }) }
-    else {
-      getAutosCategoryId(categoryId).then((data) => {
-        setAutosList(data)
-      }).catch(error => {
-        setAutosList([])
-      }).catch(error => {
-      })
-    }
-  }, [categoryId])
+  function ItemListContainer() {
+    const [productosList, setProductosList] = useState([])
+    const params = useParams();
+    const categoriaId = params.categoriaId;
+    const [isLoading, setIsLoading] = useState(true);
+  
+    useEffect(() => {
+      if (categoriaId === undefined){
+      getProductos().then(data => {
+        setProductosList(data)
+        setIsLoading(false);
+      })}
+      else {
+        getProductosCategoriaId(categoriaId).then((data) => {
+          setProductosList(data)
+          setIsLoading(false);
+        })
+      }
+    }, [categoriaId])
 
   return (
     <div>
-      <ItemList autosList={autosList}/>
+      {isLoading ? <Loader/> : <ItemList productosList={productosList}/>}
     </div>
   );
 }

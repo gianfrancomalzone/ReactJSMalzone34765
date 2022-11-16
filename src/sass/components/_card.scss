@@ -1,6 +1,14 @@
+.precio {
+    text-align: center ;
+}
+
 .card {
-    background-color: rgb(179, 179, 153);
+    background-color: rgb(179, 179, 153) !important;
     width: 20rem;
+}
+
+.col {
+    margin: 3%;
 }
 
 .btn-card {
@@ -15,6 +23,7 @@
     transition: all .3s;
     box-shadow: 6px 6px 12px #c5c5c5,
                 -6px -6px 12px #fff;
+    text-align: center ;
 }
 
 button:hover {
@@ -23,8 +32,9 @@ button:hover {
 }
 
 .imgTamaño {
-    object-fit: cover ;
+    object-fit: fill ;
     max-width: 290px;
+    max-height: 290px;
     margin: 3%;
     align-items: center;
 }

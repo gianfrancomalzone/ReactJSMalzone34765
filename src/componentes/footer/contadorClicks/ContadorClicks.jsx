@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import "./contadorClicks.css"
 
 export default function ClickCount() {
     const [clicks,setClicks] = useState(0);

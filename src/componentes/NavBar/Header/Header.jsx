@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.css";
+import "../../../styles.scss";
 import CartWidget from "../CardWidget/CartWidget";
 import { Link } from "react-router-dom";
 
@@ -8,11 +8,10 @@ function Header() {
     <div className="nav-bar">
       <ul className="nav-menu">
         <Link className="link" to="/">Inicio </Link>
-        <Link className="link" to="/category/sedan">Sedan</Link>
-        <Link className="link" to="/category/camioneta">Camionetas</Link>
-        <Link className="link" to="/category/rally">Autos de Rally</Link>
-        <Link className="link" to="/category/deportivo">Deportivos</Link>
-        <Link className="link" to="/category/coupe">Copues</Link>
+        <Link className="link" to="/categoria/ferreteria">Ferreteria</Link>
+        <Link className="link" to="/categoria/latex">Latex</Link>
+        <Link className="link" to="/categoria/sinteticos">Sinteticos</Link>
+        <Link className="link" to="/categoria/accesorios">Accesorios</Link>
         <CartWidget />
       </ul>
     </div>

@@ -1,23 +1,24 @@
 import React from "react";
-import "./App.css";
 import Footer from "./componentes/footer/Footer";
 import ItemListContainer from "./componentes/ItemList/itemListContainer/ItemListContainer";
 import ItemDetailContainer from "./componentes/ItemList/ItemDetailContainer/itemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./componentes/NavBar/Header/Header";
 import {CartContextProvider} from "./context/cartContext"
+import CardView from "./componentes/ItemList/Card/CardView";
+import "./styles.scss"
 
 function App() {
   return (
-    <CartContextProvider className="App">
-      <BrowserRouter>
+    <CartContextProvider >
+      <BrowserRouter className="App">
         <Header />
-          <Routes>
-            <Route path="/" element={<ItemListContainer />} />
-            <Route path="/autos/:id" element={<ItemDetailContainer />} />
-            <Route path="*" element={<h1>Fuera del Route</h1>} />
-            <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
-            <Route path="/cart" element={<h1>Cart</h1>}/>
+          <Routes >
+            <Route path="/"                       element={<ItemListContainer />} />
+            <Route path="/productos/:id"          element={<ItemDetailContainer />} />
+            <Route path="*"                       element={<h1>Fuera del Route</h1>} />
+            <Route path="/categoria/:categoriaId" element={<ItemListContainer/>}/>
+            <Route path="/cart"                   element={<CardView/>} />
           </Routes>
         <Footer />
       </BrowserRouter>
