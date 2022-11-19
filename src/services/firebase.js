@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, doc, getDocs, getDoc, query, where, addDoc, writeBatch } from "firebase/firestore";
+import { getFirestore, collection, doc, getDocs, getDoc, query, where, addDoc } from "firebase/firestore";
+import { dataMockAPI } from "../mockAPI/mockAPI";
+
 const firebaseConfig = {
     apiKey: "AIzaSyBVWnkA1KfuKJBd3R2BaLF-JcFwZ6Yr0YQ",
     authDomain: "reactjsmalzone34765.firebaseapp.com",
@@ -56,4 +58,14 @@ export async function createBuyOrder(orderData) {
     const collectionRef = collection(db, "orders");
     let respuesta = await addDoc(collectionRef, orderData)
     return respuesta.id;
+}
+
+export async function sendDataToFirebase(){
+    const data = dataMockAPI
+    let itemsCollectionRef = collection(db, "productos")
+    for(let productos of data){
+    delete(productos.id)
+    let newDoc = await addDoc(itemsCollectionRef, productos);
+    console.log("Documento creado:",newDoc.id)
+    }
 }
