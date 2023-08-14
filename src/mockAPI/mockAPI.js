@@ -140,9 +140,9 @@ export const dataMockAPI = [
             marca:
                 "Poxipol",
             precio:
-                "899",
+                899,
             stock:
-                "324",
+                324,
             titulo:
                 "WD-40 Clasico",
         }, {

@@ -8,15 +8,15 @@ import {CartContextProvider} from "./context/cartContext"
 import CardView from "./componentes/ItemList/Card/CardView";
 import "./styles.scss"
 
-/*import {sendDataToFirebase} from "./services/firebase" */
+import {sendDataToFirebase} from "./services/firebase" 
 
 function App() {
   return (
     <CartContextProvider >
-      {/*<button onClick={sendDataToFirebase}>Enviar Datos</button> */}
       <BrowserRouter className="App">
         <Header />
-          <Routes >
+        <button onClick={sendDataToFirebase}>Enviar Datos</button>
+        <Routes >
             <Route path="/"                       element={<ItemListContainer />} />
             <Route path="/productos/:id"          element={<ItemDetailContainer />} />
             <Route path="*"                       element={<h1>Fuera del Route</h1>} />
