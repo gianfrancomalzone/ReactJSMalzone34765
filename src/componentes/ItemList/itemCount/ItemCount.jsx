@@ -16,12 +16,12 @@ export default function ItemCount({ stock, initial, text, onAddToCart }) {
         <div className="itemcountContainer">
             <div>
                 <h2>Realiza tu compra</h2>
-                <div className="itemcountControl">
-                    <Button onClick={handleSubstract}>
+                <div className="controlPadre">
+                    <Button onClick={handleSubstract} className="controlMas">
                         -
                     </Button>
-                    <div className="itemcountControl">{count}</div>
-                    <Button onClick={handleAdd}>
+                    <span className="">{count}</span>
+                    <Button onClick={handleAdd} className="controlMenos">
                         +
                     </Button>
                 </div>

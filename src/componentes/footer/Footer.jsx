@@ -1,40 +1,48 @@
 import React from "react";
-import ContadorClicks from "./contadorClicks/ContadorClicks";
-import "../../styles.scss"
+import "../../sass/components/footer.scss"
 
 export default function Footer() {
   return (
-    <>
-      <div className="container">
-        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div className="col-md-4 d-flex align-items-center">
-            <a
-              href="/"
-              className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
-            >
+    <footer class="main-footer">
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div class="main-footer__row main-footer__row-1">
+          <h2 class="heading heading-sm main-footer__heading-sm">
+            <span>Social</span>
+          </h2>
+          <div class="main-footer__social-cont">
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/gianfranco-malzone-7b2317242/">
+              <img
+                class="main-footer__icon"
+                src="https://i.postimg.cc/qB68XPhJ/linkedin-ico.png"
+                alt="icon"
+              />
             </a>
-            <span className="mb-3 mb-md-0 text-muted">
-            <ContadorClicks className="text-center align-items-center"   />
-            </span>
+            <a target="_blank" rel="noreferrer" href="https://github.com/gianfrancomalzone">
+              <img
+                class="main-footer__icon"
+                src="https://i.postimg.cc/bNX16mkQ/github-ico.png"
+                alt="icon"
+              />
+            </a>
+            <a target="_blank" rel="noreferrer" href="mailto:gianfrancomalzone.gm@gmail.com?subject=Contacto%20por%20v%C3%ADa%20del%20Portafolio%20Web.">
+              <img
+                class="main-footer__icon"
+                src="https://i.postimg.cc/909Zm95R/email-ico.png"
+                alt="icon"
+              />
+            </a>
+            
           </div>
-
-          <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li className="ms-3">
-              <a className="text-muted" href="#!">
-              </a>
-            </li>
-            <li className="ms-3">
-              <a className="text-muted" href="#!">
-              </a>
-            </li>
-            <li className="ms-3">
-              <a className="text-muted" href="#!">
-              </a>
-            </li>
-          </ul>
-        </footer>
+        </div>
+        <div class="main-footer__row main-footer__row-2">
+          <h4 class="heading heading-sm text-lt">Gianfranco Malzone</h4>
+          <p class="main-footer__short-desc">
+            Desarrollador FrontEnd Jr.
+          </p>
+        </div>
       </div>
-      
-    </>
+    </div>
+  </footer>
   );
 }
